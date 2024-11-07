@@ -25,7 +25,11 @@ void	ft_putnbr_fd(int n, int fd)
 			ft_putchar_fd('-', fd);
 		}
 		if (number >= 10)
-			ft_putnbr_fd(number / 10, fd);
-		ft_putchar_fd(number % 10 + '0', fd);
+			ft_putchar_fd(number % 10 + '0', fd);
+		ft_putnbr_fd(number / 10, fd);
 	}
+}
+int main()
+{
+	ft_putnbr_fd(293, 1);
 }
